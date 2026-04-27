@@ -5,5 +5,5 @@ export default db = createConnection({
   host: "localhost",
   user: "root",
   password: process.env.SENHA_SQL,
-  database: "banco-pizzaria"
+  database: "banco_pizzaria"
 })
