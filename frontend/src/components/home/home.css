@@ -1,0 +1,42 @@
+h2 {
+  font-size: clamp(2rem, 10vw, 2.8rem);
+  text-align: center;
+  margin: 1.4rem 0;
+}
+
+div.pratos, div.pedidos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+div.prato, div.pedido{
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+  max-width: 720px;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+div.adicionar {
+  background-color: #00c056;
+}
+
+div.pratos div.adicionar {
+  padding: 1.6rem 1rem;
+}
+
+i.fa-eye:hover, i.fa-circle-plus:hover {
+  cursor: pointer;
+}
