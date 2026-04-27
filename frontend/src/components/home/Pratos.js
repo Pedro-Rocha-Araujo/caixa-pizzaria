@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./home.css"
 
 function Pratos() {
@@ -6,11 +7,13 @@ function Pratos() {
       <h2>Pratos <i className="fa-solid fa-book-open"></i></h2>
       <div className="pratos">
 
-        <div className="prato adicionar">
-          <h3>Adicionar Prato</h3>   
-          <i className="fa-solid fa-circle-plus fa-xl"></i> 
-        </div>
-
+        <Link className="card-link" to="novo-prato">
+          <div className="prato adicionar">
+            <h3>Adicionar Prato</h3>   
+            <i className="fa-solid fa-circle-plus fa-xl"></i> 
+          </div>
+        </Link>
+    
         <div className="prato">
           <div className="infos">
             <h3>Pizza tamanho G</h3>

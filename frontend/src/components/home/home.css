@@ -4,6 +4,12 @@ h2 {
   margin: 1.4rem 0;
 }
 
+a.card-link {
+  width: 100%;
+  max-width: 720px;
+  text-decoration: none;
+}
+
 div.pratos, div.pedidos {
   display: flex;
   flex-direction: column;
@@ -21,6 +27,11 @@ div.prato, div.pedido{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.2s;
+}
+
+div.prato:hover, div.pedido:hover {
+  transform: scale(1.02);
 }
 
 div.infos {
