@@ -1,0 +1,62 @@
+div.login {
+  max-width: 780px;
+  margin: auto;
+  margin-top: 8rem;
+}
+
+div.header-login {
+  background-color: #222;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.header-login h1 {
+  font-size: clamp(2rem, 10vw, 2.8rem);
+  text-align: center;
+}
+
+div.main-login {
+  padding: 1rem 0 0 0;
+  border: 1px solid #222;
+}
+
+.main-login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-login input {
+  font-size: clamp(0.92rem, 6vw, 1.09rem);
+  padding: 0.6rem;
+  outline: none;
+  height: 2.2rem;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.main-login button {
+  font-size: clamp(0.92rem, 6vw, 1.09rem);
+  background-color: #222;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 1.1rem 0;
+}
+
+div.footer-login {
+  color: #222;
+  padding: 0.4rem;
+}
+
+.footer-login p {
+  font-size: clamp(0.92rem, 6vw, 1.09rem);
+  text-align: center;
+}
+
+.footer-login a {
+  color: #222;
+}
