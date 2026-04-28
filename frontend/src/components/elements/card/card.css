@@ -12,6 +12,7 @@ div.background {
 }
 
 div.card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -55,4 +56,11 @@ div.card button.delete {
 div.card button.edit {
   background-color: rgb(40, 79, 255);
   margin-left: 0.4rem;
+}
+
+i.flutuante {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
 }
