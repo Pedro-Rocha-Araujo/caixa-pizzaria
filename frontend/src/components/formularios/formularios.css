@@ -15,6 +15,14 @@ form.cadastro input {
   border:  1px solid #222;
 }
 
+form.cadastro textarea {
+  font-size: clamp(0.92rem, 6vw, 1.09rem);
+  padding: 0.6rem;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 120px;
+}
+
 form.cadastro button {
   font-size: clamp(0.92rem, 6vw, 1.09rem);
   background-color: #222;
