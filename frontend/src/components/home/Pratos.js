@@ -1,9 +1,26 @@
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import CardPrato from "../elements/card/CardPrato"
+import axios from "axios"
 import "./home.css"
 
 function Pratos() {
+  const [pratos, setPratos] = useState([])
+  const [pratoCard, setPratoCard] = useState()
+
+  useEffect(()=>{
+    async function getPratos() {
+      const response = await axios.get("http://localhost:4000/pratos")
+      setPratos(response.data)
+    }
+    getPratos()
+  }, [])
+
   return (
-    <section> 
+    <section>
+      { pratoCard && (
+        <CardPrato prato={pratoCard} setPrato={setPratoCard} />
+      ) } 
       <h2>Pratos <i className="fa-solid fa-book-open"></i></h2>
       <div className="pratos">
 
@@ -14,29 +31,17 @@ function Pratos() {
           </div>
         </Link>
     
-        <div className="prato">
-          <div className="infos">
-            <h3>Pizza tamanho G</h3>
-            <p>Valor: R$ 40,00</p>    
-          </div>
-          <i className="fa-solid fa-eye fa-xl"></i> 
-        </div>
-
-        <div className="prato">
-          <div className="infos">
-            <h3>Pizza tamanho P</h3>
-            <p>Valor: R$ 30,00</p>    
-          </div>
-          <i className="fa-solid fa-eye fa-xl"></i> 
-        </div>
-
-        <div className="prato">
-          <div className="infos">
-            <h3>Pizza tamanho GG</h3>
-            <p>Valor: R$ 60,00</p>    
-          </div>
-          <i className="fa-solid fa-eye fa-xl"></i> 
-        </div>
+        {pratos.map((prato, index)=>{
+          return (
+            <div onClick={()=>setPratoCard(prato)} key={prato.id} className="prato">
+              <div className="infos">
+                <h3>{prato.nome} Tamanho {prato.tamanho}</h3>
+                <p>Valor: R$ {prato.preco}</p>    
+              </div>
+              <i className="fa-solid fa-eye fa-xl"></i> 
+            </div>
+          )
+        })}
 
       </div>
     </section>
