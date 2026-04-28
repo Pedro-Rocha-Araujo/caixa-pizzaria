@@ -9,7 +9,7 @@ function CardPrato({ prato, setPrato }) {
   return (
     <div className="background">
       <div className="card">
-        <h3>{pratoCard.nome} - {pratoCard.tamanho}</h3>
+        <h3>{pratoCard.nome} {pratoCard.tamanho && (`- ${pratoCard.tamanho}`)}</h3>
 
         <div className="infos">
           <span>Preço: R${pratoCard.preco}</span>
